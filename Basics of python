@@ -1,0 +1,69 @@
+# Write a program to print your name.
+name=input("Enter your name")
+print(name) 
+'''
+OUTPUT
+Enter your name Priya
+Priya
+'''
+
+# Write a program for a Single line comment and multi-line comments
+#This is a single-line comment
+
+'''
+This is a multi-line comment
+using triple single quotes.
+'''
+
+"""
+This is another multi-line comment
+using triple double quotes.
+"""
+
+#Define variables for different Data Types int, Boolean, char, float, double and print on the Console.
+a='6'
+print(type(a))
+b=6
+print(type(b))
+c=True
+print(type(c))
+d=2.32
+print(type(d))
+'''
+Output
+<class 'str'>
+<class 'int'>
+<class 'bool'>
+<class 'float'>
+'''
+
+# Define the local and Global variables with the same name and print both variables and understand the scope of the variables
+a=6
+def func(a):
+    a=12
+    print("Local",a)
+func(a)
+print("Global",a)
+'''
+Local 12
+Global 6
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
