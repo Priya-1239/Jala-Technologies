@@ -1,0 +1,233 @@
+# 1. Write a function to add integer values of an array
+arr=list(map(int,input("Enter elements").split()))
+def add():
+    sum=0
+    for i in range(len(arr)):
+        sum= sum + arr[i]
+    print("The sum of values are",sum)
+add()
+'''
+Output
+Enter elements 1 2 3
+The sum of values are 6
+'''
+
+# 2. Write a function to calculate the average value of an array of integers
+arr=list(map(int,input().split()))
+def avg():
+    sum=0
+    for i in range(len(arr)):
+        sum= sum+arr[i]
+        avg= sum/(len(arr))
+    print(avg)
+avg()
+'''
+Output
+1 2 3 4 5
+3.0
+'''
+
+# 3. Write a program to find the index of an array element
+arr = list(map(int,input().split()))
+n=int(input("Enter a number which is in array"))
+print(arr.index(n))
+'''
+Output
+ 1 5 2 6 7
+Enter a number which is in array 7
+4
+'''
+
+# 4. Write a function to test if array contains a specific value
+arr = list(map(int,input("Enter the elements").split()))
+n=int(input("Enter the number you want to check"))
+def specific():
+    for i in range(len(arr)):
+        if n==arr[i]:
+            print("Element existed")
+specific()
+'''
+Output
+1 2 3 4
+ 2
+Element existed
+'''
+
+# 5. Write a function to remove a specific element from an array
+arr=list(map(int,input("Enter the elements").split()))
+n=int(input("Enter the element you wanted to remove"))
+arr.remove(n)
+print(arr)
+'''
+Output
+Enter the elements 1 2 3 4 5 6
+Enter the element you wanted to remove 1
+[2, 3, 4, 5, 6]
+'''
+
+# Write a function to copy an array to another array
+arr=list(map(int,input("Enter the elements").split()))
+coarr= []
+coarr = arr.copy()
+print("The copied array is",coarr)
+'''
+Output
+Enter the elements 1 2 3 4
+The copied array is [1, 2, 3, 4]
+'''
+
+# Write a function to insert an element at a specific position in the array
+arr=list(map(int,input("Enter the elements").split()))
+n=int(input("Enter the index where you want to insert"))
+new=int(input("Enter the number you wanted to insert"))
+arr.insert(n,new)
+print(arr)
+'''
+Output
+Enter the elements 1 2 3 5 6
+Enter the index where you want to insert 2
+Enter the number you wanted to insert 9
+[1, 2, 9, 3, 5, 6]
+'''
+
+# Write a function to find the minimum and maximum value of an array
+arr=list(map(int,input("Enter the elements").split()))
+def maxmin():
+    print("The maaximum element is",min(arr))
+    print("The minimum element is",max(arr))
+maxmin()
+'''
+Output
+Enter the elements 1 2 3 5 6
+Enter the index where you want to insert 2
+Enter the number you wanted to insert 9
+[1, 2, 9, 3, 5, 6]
+'''
+
+Write a function to reverse an array of integer values
+# Reversing an array
+arr=list(map(int,input("Enter the elements").split()))
+arr.reverse()
+print(arr)
+'''
+Enter the elements 1 2 3 4
+[4, 3, 2, 1]
+'''
+
+Write a function to find the duplicate values of an array
+arr = list(map(int, input("Enter numbers: ").split()))
+printed = set() 
+for i in range(len(arr)):
+    for k in range(i + 1, len(arr)):
+        if arr[i] == arr[k] and arr[i] not in printed:
+            print("Duplicate element in given array:", arr[i])
+            printed.add(arr[i]) 
+'''
+Output
+Enter numbers:  1 2 3 4 3 2
+Duplicate element in given array: 2
+Duplicate element in given array: 3
+'''
+
+Write a program to find the common values between two arrays
+arr1=list(map(int,input().split()))
+arr2=list(map(int,input().split()))
+c= set(arr1).intersection(set(arr2))
+print(c)
+'''
+Output
+1 2 3 4 5 6
+ 4 5 6 7 8
+{4, 5, 6}
+'''
+
+Write a method to remove duplicate elements from an array
+arr=list(map(int,input().split()))
+a=[]
+for i in range(len(arr)):
+    if arr[i] not in a:
+        a.append(arr[i])
+print(a)
+'''
+Output
+1 2 3 4 2 1
+[1, 2, 3, 4]
+'''
+
+Write a method to find the second largest number in an array
+arr=list(map(int,input().split()))
+arr.sort()
+print(arr[-2])
+'''
+Output
+ 1 2 3 9 8
+8
+'''
+
+Write a method to find the second largest number in an array
+arr=list(map(int,input().split()))
+arr.sort()
+print(arr[-2])
+'''
+Output
+1 2 8 0 9 10 20
+10
+'''
+
+Write a method to find number of even number and odd numbers in an array
+arr=list(map(int,input().split()))
+count=0
+c=0
+for i in range(len(arr)):
+    if arr[i]%2==0:
+        count+=1
+    else:
+        c=c+1
+print("Total odd's are",c)
+print("Total even's are",count)
+'''
+Output
+1 4 5 2 7
+Total odd's are 3
+Total even's are 2
+'''
+
+Write a function to get the difference of largest and smallest value
+arr=list(map(int,input().split()))
+arr.sort()
+print(arr)
+print("The difference of largest and smallest value is",arr[-1]-arr[0])
+'''
+Output
+ 1 5 6 9 2
+[1, 2, 5, 6, 9]
+The difference of largest and smallest value is 8
+'''
+
+Write a method to verify if the array contains two specified elements(12,23)
+arr = list(map(int,input().split()))
+n=int(input())
+m=int(input())
+for i in range(len(arr)):
+    if n==arr[i]:
+        print("First element exist")
+    if m==arr[i]:
+        print("Second element exist")
+'''
+Output
+ 1 23 12 2 4
+ 12
+ 23
+Second element exist
+First element exist
+'''
+
+Write a program to remove the duplicate elements and return the new array
+arr = list(map(int, input("Enter numbers: ").split()))
+arr1=sorted(set(arr))
+print(arr1)
+'''
+Output
+Enter numbers:  1 2 4 3 2 1
+[1, 2, 3, 4]
+'''
