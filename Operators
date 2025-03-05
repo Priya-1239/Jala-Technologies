@@ -1,0 +1,96 @@
+# Write a function for arithmetic operators(+,-,*,/)
+a=int(input("Enter a value"))
+b=int(input("Enter another value"))
+def aritheametic_operators(a,b):
+    c=a+b
+    print("Addition:",c)
+    d=a-b
+    print("Subtraction:",d)
+    e=a*b
+    print("Multiplication:",e)
+    f=a/b
+    print("Division:",f)
+    g=a%b
+    print("Modulus:",g)
+aritheametic_operators(a,b)
+'''
+Output
+Enter a value 5
+Enter another value 5
+Addition: 10
+Subtraction: 0
+Multiplication: 25
+Division: 1.0
+Modulus: 0
+'''
+
+# Write a method for increment and decrement operators(++, --)
+a=int(input("Enter a number for increment"))
+b=int(input("Enter a number for decrement"))
+def incre(a):
+        a+=1
+        print(a)
+incre(a)
+
+def decre(b):
+    b-=1
+    print(b)
+decre(b)
+
+'''
+Enter a number for increment 5
+Enter a number for decrement 6
+6
+5
+'''
+
+# Write a program to find the two numbers equal or not.
+a=int(input("Enter a number"))
+b=int(input("Enter another number"))
+if a==b:
+    print("Equal")
+else:
+    print("Not Equal")
+'''
+Output
+Enter a number 5
+Enter another number 6
+Not Equal
+'''
+
+#Program for relational operators (<,<==, >, >==)
+a=int(input("Enter a number"))
+b=int(input("Enter another number"))
+c=a>b
+d=a<b
+x= a>=b
+e= a<=b
+print(c)
+print(d)
+print(x)
+print(e)
+'''
+Output
+Enter a number 9
+Enter another number 0
+True
+False
+True
+False
+'''
+
+#Print the smaller and larger number
+a=int(input("Enter a number"))
+b=int(input("Enter another number"))
+if a>b:
+    print("a is big")
+elif a<b:
+    print("a is small")
+else:
+    print("a is equal to b")
+'''
+output
+Enter a number 5
+Enter another number 5
+a is equal to b
+'''
