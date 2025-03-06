@@ -1,0 +1,46 @@
+# Write a program to read text file
+with open("sample.txt", "r") as file:
+    content = file.read()
+    print("File Content:\n", content)
+
+# Write a program to write text to .txt file using InputStream
+text = input("Enter text to write into the file: ")
+with open("output.txt", "w") as file:
+    file.write(text)
+print("Text successfully written to 'output.txt'!")
+
+# Write a program to read a file stream
+with open("sample.txt", "r") as file:
+    for line in file:
+        print(line.strip()) 
+
+# Write a program to read a file stream supports random access
+# Open the file in read mode with random access
+with open("sample.txt", "r") as file:
+    file.seek(4)  
+    data = file.read(20)  
+    print("Random Access Data:", data)
+
+# Write a program to read a file a just to a particular index using seek()
+with open("sample.txt", "r") as file:
+    file.seek(3)  
+    content = file.read(15) 
+    print("Content from index 5:", content)
+
+# Write a program to check whether a file is having read access and write access permissions
+import os
+
+file_name = "sample.txt"
+
+if os.path.exists(file_name):
+    if os.access(file_name, os.R_OK):
+        print(f"'{file_name}' has READ access.")
+    else:
+        print(f"'{file_name}' does NOT have READ access.")
+
+    if os.access(file_name, os.W_OK):
+        print(f"'{file_name}' has WRITE access.")
+    else:
+        print(f"'{file_name}' does NOT have WRITE access.")
+else:
+    print(f"Error: '{file_name}' does not exist.")
