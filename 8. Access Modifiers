@@ -1,0 +1,42 @@
+'''
+1.Create a class with PRIVATE fields, private method and a main method. Print the fields in main method. Call the private method in main method.
+Create a sub class and try to access the private fields and methods from sub class.
+2. Create a class with PROTECTED fields and methods. Access these fields and methods from any other class in the same package.
+Also, Access the PROTECTED fields and methods from child class located in a different package
+Access the PROTECTED fields and methods from any class in different package
+3. Create a class with PUBLIC fields and methods.
+Access the public methods and fields from any class in the same package or different package.
+'''
+
+class Super:
+    def __init__(self, var1, var2, var3):
+        self.var1 = var1         
+        self._var2 = var2       
+        self.__var3 = var3     
+
+    def display_public_member(self):
+        print(f"Public Data Member: {self.var1}")
+
+    def _display_protected_member(self):
+        print(f"Protected Data Member: {self._var2}")
+
+    def __display_private_member(self):
+        print(f"Private Data Member: {self.__var3}")
+
+    def access_private_member(self):
+        self.__display_private_member()
+
+class Sub(Super):
+    def __init__(self, var1, var2, var3):
+        super().__init__(var1, var2, var3) 
+
+    def access_protected_member(self):
+        self._display_protected_member()
+
+obj = Sub("Darshini", 6, "Priya")
+
+obj.display_public_member()     
+obj.access_protected_member()   
+obj.access_private_member()     
+
+print(f"Object protected member: {obj._var2}")
