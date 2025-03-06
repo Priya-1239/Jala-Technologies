@@ -15,11 +15,6 @@ print(a + " " + b)
 a = "Darshini"
 print("Length of the string is",len(a))
 
-# Searching in strings using index()
-a = 'Priya'
-b = 'ya'
-print(a.index(b))
-
 # Extract a string using Substring
 a="Darshini"
 print(a[1:6])
