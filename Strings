@@ -1,0 +1,74 @@
+# Different ways creating a string
+a='hi'
+b="Priya"
+c='''Vijay'''
+print(a)
+print(b)
+print(c)
+
+# Concatenating two strings using + operator
+a='hi'
+b="Priya"
+print(a + " " + b)
+
+# Concatenating two strings using + operator
+a='hi'
+b="Priya"
+print(a + " " + b)
+
+# Finding the length of the string
+a = "Darshini"
+print("Length of the string is",len(a))
+
+# Extract a string using Substring
+a="Darshini"
+print(a[1:6])
+
+# Searching in strings using index()
+a="Hello Darshini! I am Vijay"
+print(a.index("Vijay"))
+
+# Matching a String Against a Regular Expression With matches()
+import re
+a="Priya"
+b="Priya wants to achieve something big"
+print(re.match(a,b))
+
+# Comparing strings
+a="Priya"
+b="priya"
+c=a
+print(a==b)
+print(a!=b)
+print(a==c)
+print(b!=c)
+
+# startsWith(), endsWith() and compareTo()
+a="Hello Jala Technologies"
+b=a
+print(a.startswith("Hello"))
+print(a.endswith("Jala"))
+print((a>b)-(a<b))
+
+# Trimming strings with strip()
+a="Hi my dear Priya"
+print(a.strip("Hi"))
+
+# Replacing characters in strings with replace()
+a="Hi my dear Priya"
+print(a.replace("Hi","Hello"))
+
+# Splitting strings with split()
+a="Hello Priya, How are you?"
+print(a.split(","))
+
+# Converting integer objects to Strings
+a=int(input("Enter anything"))
+b=str(a)
+print(b)
+print(type(b))
+
+# Converting to uppercase and lowercase
+a = input("Enter any word")
+print(a.lower())
+print(a.upper())
