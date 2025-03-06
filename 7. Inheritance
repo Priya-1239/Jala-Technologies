@@ -1,0 +1,67 @@
+'''
+A, B and C are classes
+A is a super class. B is a sub class of A. C is a sub class of B.
+Create three methods in each class, 2 methods are specific to each class and third method (override method) should be in all three Classes A, B and C
+Create a class with main method. Create an object for each class A, B and C in main method and call every method of each class using its own object/instance.
+Call an overridden method with super class reference to B and C class’s objects
+Runtime Polymorphism with Data Members/Instance variables, Repeat the above process only for data members
+'''
+class A:
+    def __init__(self):
+        self.value = "Value from A"
+
+    def method1(self):
+        print("Method1 from A")
+
+    def method2(self):
+        print("Method2 from A")
+
+    def override_method(self):
+        print("Overridden method in A")
+
+class B(A):
+    def __init__(self):
+        super().__init__()
+        self.value = "Value from B"
+
+    def method3(self):
+        print("Method3 from B")
+
+    def method4(self):
+        print("Method4 from B")
+
+    def override_method(self):
+        print("Overridden method in B")
+
+class C(B):
+    def __init__(self):
+        super().__init__()
+        self.value = "Value from C"
+
+    def method5(self):
+        print("Method5 from C")
+
+    def method6(self):
+        print("Method6 from C")
+
+    def override_method(self):
+        print("Overridden method in C")
+
+def main():
+    obj_a, obj_b, obj_c = A(), B(), C()
+
+    obj_a.method1(), obj_a.method2(), obj_a.override_method()
+    obj_b.method1(), obj_b.method2(), obj_b.method3(), obj_b.method4(), obj_b.override_method()
+    obj_c.method1(), obj_c.method2(), obj_c.method3(), obj_c.method4(), obj_c.method5(), obj_c.method6(), obj_c.override_method()
+
+    ref = A()
+    ref.override_method()
+    ref = B()
+    ref.override_method()
+    ref = C()
+    ref.override_method()
+
+    print(ref.value)
+
+if __name__ == "__main__":
+    main()
