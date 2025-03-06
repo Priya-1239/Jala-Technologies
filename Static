@@ -1,0 +1,39 @@
+# Define a static variable and access that through a class
+class company():
+    company_name = "Tata Group"
+print(company.company_name)
+
+# Define a static variable and access that through a instance
+class company():
+    company_name="Tata Group"
+c1=company()
+print(c1.company_name)
+
+# Define a static variable and change within the instance
+class company():
+    company_name="Tata Group"
+c1=company()
+c2=company()
+c1.company_name="Reliance"
+print(c1.company_name)
+print(c2.company_name)
+
+#Define a static variable and change within the class
+class Company:
+    company_name = "Tata Group" 
+
+    @classmethod
+    def change_company_name(cls, new_name):
+        cls.company_name = new_name  
+
+c1 = Company()
+c2 = Company()
+
+print(c1.company_name)  
+print(c2.company_name)  
+
+Company.change_company_name("Reliance")
+
+print(c1.company_name)  
+print(c2.company_name)  
+print(Company.company_name)  
