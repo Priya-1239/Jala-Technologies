@@ -1,0 +1,43 @@
+# Write two methods with the same name but different number of parameters of same type and call the methods
+class Example:
+    def show(self, a=None, b=None):
+        if a is not None and b is not None:
+            print(f"Method with two parameters: {a}, {b}")
+        elif a is not None:
+            print(f"Method with one parameter: {a}")
+        else:
+            print("Method with no parameters")
+
+obj = Example()
+obj.show()
+obj.show(10)
+obj.show(20, 30)
+
+# Write two methods with the same name but different number of parameters of different data type and call the methods
+class Example:
+    def show(self, a=None, b=None):
+        if isinstance(a, int) and isinstance(b, str):
+            print(f"Method with int and string: {a}, {b}")
+        elif isinstance(a, str) and isinstance(b, int):
+            print(f"Method with string and int: {a}, {b}")
+        elif a is not None:
+            print(f"Method with one parameter: {a}")
+        else:
+            print("Method with no parameters")
+
+obj = Example()
+obj.show()
+obj.show(10)
+obj.show("Hello", 25)
+obj.show(30, "World")
+
+# Write two methods with the same name and same number of parameters of same type
+class Example:
+    def show(self, a):
+        print(f"First method: {a}")
+
+    def show(self, a):  
+        print(f"Second method: {a}")
+
+obj = Example()
+obj.show(10)
