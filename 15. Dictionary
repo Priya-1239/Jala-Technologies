@@ -1,0 +1,38 @@
+# Create a Dictionary with at least 5 key value pairs of the Student ID and Name
+# 1.1 Adding values in dictionary
+students = {
+    101: "Priya",
+    102: "Ravi",
+    103: "Anjali",
+    104: "Kiran",
+    105: "Manoj"
+}
+print("Student Dictionary:", students)
+
+# 1.2 Updating values in dictionary
+students[103] = "Ananya"
+print("Updated Dictionary:", students)
+
+# 1.3 Accessing a value in dictionary
+print("Student with ID 102:", students[102])
+
+# 1.4 Creating a nested dictionary
+nested_students = {
+    201: {"Name": "Akhil", "Grade": "A"},
+    202: {"Name": "Sneha", "Grade": "B"},
+    203: {"Name": "Vikram", "Grade": "A+"}
+}
+print("Nested Dictionary:", nested_students)
+
+# 1.5 Accessing values in nested dictionary
+print("Details of Student 202:", nested_students[202])
+print("Name of Student 203:", nested_students[203]["Name"])
+
+# 1.6 Printing keys present in a dictionary
+print("Keys in Student Dictionary:", students.keys())
+
+# 1.7 Deleting a value from dictionary
+del students[105]
+print("Dictionary after deletion:", students)
+
+
