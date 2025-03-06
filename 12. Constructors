@@ -1,0 +1,74 @@
+# Write a class with a default constructor, one argument constructor and two argument constructors. Instantiate the class to call all the constructors of that class from a main class
+class Example:
+
+    def __init__(self, arg1=None, arg2=None):
+        if arg1 is None and arg2 is None:
+            print("Default constructor called")
+        elif arg2 is None:
+            print(f"One-argument constructor called with value: {arg1}")
+        else:
+            print(f"Two-argument constructor called with values: {arg1}, {arg2}")
+
+class Main:
+    def __init__(self):
+        obj1 = Example()          
+        obj2 = Example(10)        
+        obj3 = Example(20, 30)    
+Main()
+
+# Call the constructors(both default and argument constructors) of super class from a child class
+class SuperClass:
+    def __init__(self, arg1=None, arg2=None):
+        if arg1 is None and arg2 is None:
+            print("SuperClass: Default constructor called")
+        elif arg2 is None:
+            print(f"SuperClass: One-argument constructor called with value: {arg1}")
+        else:
+            print(f"SuperClass: Two-argument constructor called with values: {arg1}, {arg2}")
+
+class SubClass(SuperClass):
+    def __init__(self, arg1=None, arg2=None):
+        if arg1 is None and arg2 is None:
+            super().__init__()
+        elif arg2 is None:
+            super().__init__(arg1)
+        else:
+            super().__init__(arg1, arg2)
+
+obj1 = SubClass()
+obj2 = SubClass(10)
+obj3 = SubClass(20, 30)
+
+# Apply private, public, protected and default access modifiers to the constructor
+class Example:
+    def __init__(self):  
+        print("Public Constructor called")
+
+    def _protected_init(self):  
+        print("Protected Constructor called")
+
+    def __private_init(self):  
+        print("Private Constructor called")
+
+    def default_init(self):  
+        print("Default Constructor called")
+
+obj = Example()
+obj._protected_init()
+obj._Example__private_init()
+obj.default_init()
+
+# Write a program which illustrates the concept of attributes of a constructor.
+class Person:
+    def __init__(self, name, age):  
+        self.name = name  
+        self.age = age  
+
+    def display(self):  
+        print(f"Name: {self.name}, Age: {self.age}")
+
+person1 = Person("Priya", 21)
+person2 = Person("Darshini", 25)
+
+person1.display()
+person2.display()
