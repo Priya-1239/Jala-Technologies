@@ -1,0 +1,77 @@
+# Write a program to generate Arithmetic Exception without exception handling
+a = 10
+b = 0
+result = a / b
+print(result)
+
+# Handle the Arithmetic exception using try-catch block
+try:
+    a = 10
+    b = 0
+    result = a / b
+    print(result)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+# Write a method which throws exception, Call that method in main class without try block
+def divide():
+    return 10 / 0
+
+print(divide())
+
+# Write a program with multiple catch blocks
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)  
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except ValueError:
+    print("Invalid input! Enter a valid number.")
+except Exception as e:
+    print("An error occurred:", e)
+
+# Write a program to throw exception with your own message
+def check_number(n):
+    if n < 0:
+        raise ValueError("Negative numbers are not allowed!")
+
+check_number(-5)
+
+# Write a program to create your own exception
+class CustomException(Exception):
+    pass
+raise CustomException("This is a custom exception")
+
+# Write a program with finally block
+try:
+    a = 10 / 0
+except ZeroDivisionError:
+    print("Exception occurred!")
+finally:
+    print("This block always executes.")
+
+# Write a program to generate Arithmetic Exception
+a = 10
+b = 0
+print(a / b)
+
+# Write a program to generate FileNotFoundException
+with open("non_existent_file.txt", "r") as file:
+    data = file.read()
+
+# Write a program to generate ClassNotFoundException
+import importlib
+importlib.import_module("non_existent_module")
+
+# Write a program to generate IOException
+import os
+os.remove("non_existent_file.txt")
+
+# Write a program to generate NoSuchFieldException
+class Example:
+    def __init__(self):
+        self.value = 10
+
+obj = Example()
+print(obj.undefined_field)
